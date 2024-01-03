@@ -5,8 +5,10 @@ import Spinner from './Spinner';
 import CountryItem from './CountryItem';
 import PropTypes from 'prop-types';
 import Message from './Message';
+import { useCities } from '../contexts/CitiesContext';
 
-function CountryList({ isLoading, cities }) {
+function CountryList() {
+    const { isLoading, cities } = useCities();
     if (isLoading) return <Spinner />
     if (!cities.length) return <Message message="Add your first Country by a Country on the map" />
     const countries = cities.reduce((arr, city) => {
