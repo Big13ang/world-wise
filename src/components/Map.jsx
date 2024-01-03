@@ -1,17 +1,29 @@
-// import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import styles from './Map.module.css'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import { useState } from 'react';
+import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { useEffect, useState } from 'react';
 
 import { useCities } from '../contexts/CitiesContext';
+import { PropTypes } from 'prop-types';
+
 function Map() {
-    // const navigate = useNavigate();
-    // const [searchParams] = useSearchParams();
-    const [mapPosition] = useState([51.505, -0.09]);
+    const [searchParams] = useSearchParams();
+    const lat = searchParams.get('lat');
+    const lng = searchParams.get('lng');
+
+    const [mapPosition, setMapPosition] = useState([4, 0]);
     const { cities } = useCities();
+
+    useEffect(() => {
+        if (!lat || !lng) return;
+        const currentPosition = [lat, lng];
+
+        setMapPosition(currentPosition);
+    }, [lat, lng, setMapPosition])
+
     return (
         <div className={styles.mapContainer} >
-            <MapContainer center={mapPosition} zoom={13} scrollWheelZoom={true} className={styles.mapContainer}>
+            <MapContainer center={mapPosition} zoom={6} scrollWheelZoom={true} className={styles.mapContainer}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
@@ -24,9 +36,30 @@ function Map() {
                         </Popup>
                     </Marker>)
                 })}
+                <ChangeCenter position={mapPosition} />
+                <DetectClick />
             </MapContainer>
         </div>
     )
 }
+
+function ChangeCenter({ position }) {
+    const map = useMap();
+    map.setView(position);
+    return null;
+}
+
+function DetectClick() {
+    const navigate = useNavigate();
+
+    useMapEvents({
+        click: e => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`)
+    });
+    return null;
+}
+
+ChangeCenter.propTypes = {
+    position: PropTypes.array,
+};
 
 export default Map

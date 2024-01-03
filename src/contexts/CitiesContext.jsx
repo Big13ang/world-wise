@@ -47,8 +47,7 @@ function CitiesProvider({ children }) {
             cities,
             isLoading,
             getCity,
-            currentCity,
-
+            currentCity
         }}>
             {children}
         </CitiesContext.Provider>
