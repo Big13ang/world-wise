@@ -53,6 +53,7 @@ function Form() {
     fetchCityData();
   }, [lat, lng]);
 
+  if (!lat || !lng) return <Message message="Start by Clicking on the map !" />
   if (geocodingErorr) return <Message message={geocodingErorr} />
 
   return (
