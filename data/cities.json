@@ -35,6 +35,126 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Koulikoro",
+      "country": "Mali",
+      "emoji": "🇲🇱",
+      "date": "2024-01-25T11:13:11.000Z",
+      "notes": "asdsadsadsa\nxzcxzczxc\nczxcxz",
+      "position": {
+        "lat": "12.864393531897345",
+        "lng": "-7.558250427246095"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Magburaka",
+      "country": "Sierra Leone",
+      "emoji": "🇸🇱",
+      "date": "2024-01-04T11:16:28.111Z",
+      "notes": "www",
+      "position": {
+        "lat": "8.464435395249579",
+        "lng": "-12.215251922607422"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Magburaka",
+      "country": "Sierra Leone",
+      "emoji": "🇸🇱",
+      "date": "2024-01-04T11:16:28.111Z",
+      "notes": "www",
+      "position": {
+        "lat": "8.464435395249579",
+        "lng": "-12.215251922607422"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Bir Mogrein",
+      "country": "Mauritania",
+      "emoji": "🇲🇷",
+      "date": "2024-01-04T11:18:10.293Z",
+      "notes": "qwe",
+      "position": {
+        "lat": "25.842474434129336",
+        "lng": "-7.2586060146393185"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Kyiv",
+      "country": "Ukraine",
+      "emoji": "🇺🇦",
+      "date": "2024-01-04T11:21:46.913Z",
+      "notes": "ww",
+      "position": {
+        "lat": "50.360873315315494",
+        "lng": "30.563964843750004"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Myliach",
+      "country": "Ukraine",
+      "emoji": "🇺🇦",
+      "date": "2024-01-04T11:23:52.526Z",
+      "notes": "www",
+      "position": {
+        "lat": "51.71037642216482",
+        "lng": "26.816359905507536"
+      },
+      "id": 98443203
+    },
+    {
+      "cityName": "Faya-Largeau",
+      "country": "Chad",
+      "emoji": "🇹🇩",
+      "date": "2024-01-04T11:24:38.102Z",
+      "notes": "www",
+      "position": {
+        "lat": "16.308016854890028",
+        "lng": "18.632812500000004"
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "Ubari",
+      "country": "Libya",
+      "emoji": "🇱🇾",
+      "date": "2024-01-04T11:25:42.024Z",
+      "notes": "sss",
+      "position": {
+        "lat": "26.4948560741731",
+        "lng": "12.592060224362935"
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Makarfi",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2024-01-04T11:26:02.743Z",
+      "notes": "zxc",
+      "position": {
+        "lat": "11.31148096799619",
+        "lng": "8.020019531250002"
+      },
+      "id": 98443206
+    },
+    {
+      "cityName": "Ouallam",
+      "country": "Niger (the)",
+      "emoji": "🇳🇪",
+      "date": "2024-01-04T11:26:37.785Z",
+      "notes": "sss",
+      "position": {
+        "lat": "14.118518397600127",
+        "lng": "2.6568254991410583"
+      },
+      "id": 98443207
     }
   ]
 }
