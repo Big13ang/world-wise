@@ -36,7 +36,7 @@ const CitiesReducer = (state, action) => {
             return {
                 ...state,
                 isLoading: false,
-                currentCity: {},
+                currentCity: action.payload,
                 cities: [...state.cities, action.payload]
             }
         case 'city/deleted':
@@ -76,6 +76,8 @@ function CitiesProvider({ children }) {
     }, [dispatch]);
 
     const getCity = id => {
+        if (Number(id) === Number(currentCity.id)) return;
+
         const fetchCity = async () => {
             dispatch({ type: 'loading' });
             try {
