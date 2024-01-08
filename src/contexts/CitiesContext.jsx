@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 
 const CitiesContext = createContext();
 
-const BASE_URL = 'http://localhost:9000';
+const BASE_URL = 'https://json-server-khaki.vercel.app';
 
 const initialState = {
     cities: [],
